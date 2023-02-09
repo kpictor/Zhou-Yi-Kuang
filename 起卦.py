@@ -31,13 +31,31 @@ def f():
     y1 = b3 / 4
     return y1
 
+results = []
 for i in range(6):
     result = f()
     if result == 6:
-        print("老阴")
+        results.append("老阴")
     elif result == 7:
-        print("少阳")
+        results.append("少阳")
     elif result == 8:
-        print("少阴")
+        results.append("少阴")
     elif result == 9:
-        print("老阳")
+        results.append("老阳")
+
+print("本卦为：")
+for result in results:
+    print(result)
+
+new_results = []
+for result in results:
+    if result == "老阴":
+        new_results.append("老阳")
+    elif result == "老阳":
+        new_results.append("老阴")
+    else:
+        new_results.append(result)
+
+print("变卦为：")
+for result in new_results:
+    print(result)
