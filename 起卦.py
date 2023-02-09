@@ -44,7 +44,7 @@ for i in range(6):
         results.append("老阳")
 
 print("本卦为：")
-for result in results:
+for result in results[::-1]:
     print(result)
 
 new_results = []
@@ -57,5 +57,5 @@ for result in results:
         new_results.append(result)
 
 print("变卦为：")
-for result in new_results:
+for result in new_results[::-1]:
     print(result)
